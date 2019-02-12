@@ -8,16 +8,16 @@ export class NetworkCard extends Component {
     const fullName = this.props.alum.firstName+" "+ this.props.alum.lastName;
     return (
       <React.Fragment>
-      <div class="card horizontal">
-        <div class="card-image">
+      <div className="card horizontal">
+        <div className="card-image">
           <img style={cardImg} src={Image} />
         </div>
-        <div class="card-stacked">
-          <div style={cardText} class="card-content">
+        <div className="card-stacked">
+          <div style={cardText} className="card-content">
           <span className="card-title"> {this.props.alum.firstName} {this.props.alum.lastName} </span>
-          <p>Role : {this.props.alum.role} </p> 
-          <p>Company : {this.props.alum.company} </p> 
-          <p>Location: {this.props.alum.location} </p> 
+          <p>Role : {this.props.alum.role} </p>
+          <p>Company : {this.props.alum.company} </p>
+          <p>Location: {this.props.alum.location} </p>
           <p>URL : {this.props.alum.url} </p>
           </div>
           <div style={btnRt}>
@@ -27,28 +27,25 @@ export class NetworkCard extends Component {
             <MyEditor />
             </Modal>
             <Modal header={fullName} trigger={
-            <Button style={custBtn} floating medium className='teal' icon='menu' />}>
-            <p>Profile Info here</p>
-            <div class="row valign-wrapper">
-              <div class="col s3">
-                <img class="circle responsive-img" src={Image} />       
-              </div>
+              <Button style={custBtn} floating medium className='teal' icon='menu' />}>
+              <p>Profile Info here</p>
+              <div className="row valign-wrapper">
+                <div className="col s3">
+                  <img className="circle responsive-img" src={Image} />
+                </div>
 
-              <div class="col s8">
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Company : Coding Dojo</p>
-              <p> Location : San Jose, CA, USA</p>
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Role : React FrontEnd Engineer</p>
-              <p> Role : React FrontEnd Engineer</p>
+                <div className="col s8">
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Company : Coding Dojo</p>
+                  <p> Location : San Jose, CA, USA</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                  <p> Role : React FrontEnd Engineer</p>
+                </div>
               </div>
-            </div>          
-            
-            
-            
             </Modal>
           </div>
         </div>
@@ -61,7 +58,7 @@ export class NetworkCard extends Component {
 const btnRt = {
   textAlign: 'right',
   marginTop: '-75px',
-  
+
 }
 const custBtn = {
   display: 'inline-block'
@@ -76,7 +73,7 @@ const cardText = {
   display: 'inline-block',
   height: '100%',
   width: '75%',
-  whiteSpace: 'nowrap', 
+  whiteSpace: 'nowrap',
   // overflow: 'hidden',
   // textOverflow: 'ellipsis'
 }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import Image from "../../img/dude.png"
 
 export class Profile extends Component {
   render() {
     return (
-      <div>
-        <p>Hello from Profile</p>
-      </div>
+      <p> Hello From Profile </p>
     )
   }
 }
