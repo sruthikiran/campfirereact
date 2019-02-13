@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Image from "./dude.png"
+import Image from "../../img/dude.png"
+import Placeholder from "../../img/placeholder.png"
 import {Modal, Button, Icon} from 'react-materialize'
 import MyEditor from "../MyEditor"
 
@@ -10,7 +11,7 @@ export class NetworkCard extends Component {
       <React.Fragment>
       <div className="card horizontal">
         <div className="card-image">
-          <img style={cardImg} src={Image} />
+          <img style={cardImg} src={Image} alt={Placeholder}/>
         </div>
         <div className="card-stacked">
           <div style={cardText} className="card-content">
@@ -31,7 +32,7 @@ export class NetworkCard extends Component {
               <p>Profile Info here</p>
               <div className="row valign-wrapper">
                 <div className="col s3">
-                  <img className="circle responsive-img" src={Image} />
+                  <img className="circle responsive-img" src={Image} alt={Placeholder} />
                 </div>
 
                 <div className="col s8">

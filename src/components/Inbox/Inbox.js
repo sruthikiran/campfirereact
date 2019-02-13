@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Input} from 'react-materialize'
 import MyEditor from "../MyEditor"
 
 export class Inbox extends Component {

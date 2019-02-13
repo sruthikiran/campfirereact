@@ -19,9 +19,9 @@ export class Header extends Component {
                 <li> <Link to="/feed"> Activity Feed </Link> </li>
                 <li> <Link to="/forum"> Forum </Link> </li>
                 <li> <Link to="/network"> Network </Link> </li>
-                <li> <Link to="/inbox"> Inbox <span class="new badge red accent-2">4</span> </Link> </li>
+                <li> <Link to="/inbox"> Inbox <span className="new badge red accent-2">4</span> </Link> </li>
                 <li> <Link to="/profile"> Profile </Link> </li>
-                <li><Link to="/logout"><i class="material-icons">exit_to_app</i></Link></li>
+                <li> <Link to="/logout"> Sign Out </Link></li>
               </ul>
             </div>
           </nav>

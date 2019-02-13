@@ -32,11 +32,4 @@ const rightstyle = {
   // textAlign : 'center'
 }
 
-
-
-const important = {
-  fontSize :  '1.5em',
-  fontWeight : 'bold',
-}
-
 export default Profile
