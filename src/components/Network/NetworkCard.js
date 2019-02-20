@@ -8,7 +8,6 @@ export class NetworkCard extends Component {
   render() {
     const fullName = this.props.alum.firstName+" "+ this.props.alum.lastName;
     return (
-      <React.Fragment>
       <div className="card horizontal">
         <div className="card-image">
           <img style={cardImg} src={Image} alt={Placeholder}/>
@@ -51,7 +50,6 @@ export class NetworkCard extends Component {
           </div>
         </div>
       </div>
-      </React.Fragment>
     )
   }
 }

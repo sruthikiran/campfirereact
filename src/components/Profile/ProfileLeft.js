@@ -30,14 +30,14 @@ const Modal = ({ handleClose,show ,handleClickOutside}) => {
           </div>
 
           <div className="col s6">
-            <Input s={12} label="Biographical Information" rows="4" type='textarea'/>
+            <Input s={12}label="Biographical Information" rows="4" type='textarea'/>
             <Input s={6} label="Cohort" />
             <Input s={6} label="Campus" />
             <Input s={12} label="Email" />
-            <Input s={12}  label="Mobile Number - optional" />
-            <Input s={12}  label="LinkedIn - optional" />
-            <Input s={12}  label="Github - optional" />
-            <Input s={12}  label="Website - optional" />
+            <Input s={12} label="Mobile Number - optional" />
+            <Input s={12} label="LinkedIn - optional" />
+            <Input s={12} label="Github - optional" />
+            <Input s={12} label="Website - optional" />
           </div>
       </div>
       <div style={saveCloseButtonStyle} >
@@ -60,6 +60,7 @@ export class ProfileLeft extends Component {
 
     this.showModal= this.showModal.bind(this)
     this.closeModal= this.closeModal.bind(this)
+    this.onClickOutside = this.onClickOutside(this)
   }
 
   closeModal(){
