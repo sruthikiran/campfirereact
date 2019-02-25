@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
+import {Modal, Button, Icon} from 'react-materialize'
 
 import {
   BrowserRouter as Router,
@@ -17,7 +18,7 @@ const Landing = () => (
       </div>
     </nav>
     <div style={landing_style} className="container">
-      <h3>Campfire </h3>
+      <h3 style={logoStyle}>Campfire </h3>
       <h6> Connect Faster, Smarter, Easier </h6>
       <p className="flow-text"> One common flaw we've seen in many frameworks is a lack of support for truly responsive text. While elements on the page resize fluidly, text still resizes on a fixed basis. To ameliorate this problem, for text heavy pages, we've created a class that fluidly scales text size and line-height to optimize
       </p>
@@ -30,7 +31,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      landing : false
+      landing : true
     }
 
     this.handleToggleLogin = this.handleToggleLogin.bind(this)
@@ -76,9 +77,10 @@ const wrapper_style = {
   textAlign: 'center'
 }
 
-const linkedin_btn={
+const linkedin_btn = {
   backgroundColor: '#0077b5',
   fontSize: '20px',
+  textTransform: 'none',
 }
 
 
