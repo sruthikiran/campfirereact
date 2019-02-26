@@ -14,7 +14,6 @@ export class Profile extends Component {
             <ProfileRight />
           </div>
       </div>
-
     )
   }
 }
@@ -23,7 +22,6 @@ export class Profile extends Component {
 const leftstyle = {
   listStyle : 'none',
   marginRight: '2em',
-
   // textAlign : 'center'
 }
 

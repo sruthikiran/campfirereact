@@ -1,27 +1,35 @@
 import React, { Component } from 'react'
-import NetworkSearch from './NetworkSearch'
-import NetworkCard from './NetworkCard'
-
-
+import NetworkLeft from './NetworkLeft'
+import NetworkRight from './NetworkRight'
 
 export class Network extends Component {
- 
   render() {
-    const allAlumni = [
-      {firstName: 'Dane1', lastName:'Olsen1', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd',location: 'San Jose', url: 'linkedin.com'},
-      {firstName: 'Dane2', lastName:'Olsen2', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd', location: 'San Jose',url: 'linkedin.com'},
-      {firstName: 'Dane3', lastName:'Olsen1', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd', location: 'San Jose', url: 'linkedin.com'},
-      {firstName: 'Dane1', lastName:'Olsen1', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd',location: 'San Jose', url: 'linkedin.com'},
-      {firstName: 'Dane2', lastName:'Olsen2', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd', location: 'San Jose',url: 'linkedin.com'},
-      {firstName: 'Dane3', lastName:'Olsen1', role: 'React Frontend Engineer' , company: 'DaneOlsen Ltd', location: 'San Jose', url: 'linkedin.com'},
-
-    ]
-    return allAlumni.map((alum) => (
-          <div className="col s12 m6 l6 xl4">
-            <NetworkCard key={alum.firstName} alum={alum} />
+    return (
+      <div className="row valign-wrapper">
+          <div className="col s2" style={leftstyle}>
+            <NetworkLeft />
           </div>
-    ));
+          <div className="col s9" style={rightstyle}>
+            <NetworkRight />
+          </div>
+      </div>
+    )
   }
+}
+
+
+const leftstyle = {
+  listStyle : 'none',
+  marginRight: '2em',
+  outline : '2px solid white',
+  marginTop : '2em'
+  // textAlign : 'center'
+}
+
+const rightstyle = {
+  outline : '2px solid white',
+  marginTop : '2em'
+  // textAlign : 'center'
 }
 
 export default Network

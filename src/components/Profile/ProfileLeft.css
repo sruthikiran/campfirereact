@@ -26,3 +26,26 @@
 .display-none {
   display: none;
 }
+
+.imgStyle {
+  margin-top : 2em;
+  border-radius: 5px
+}
+
+.buttonStyle {
+  margin-top : 2em;
+  margin-bottom : 2em
+}
+
+.saveCloseButton {
+  text-align : center
+}
+
+.closeButton {
+  margin-left : 1em
+}
+
+.important {
+  font-size :  1.5em;
+  font-weight : bold
+}

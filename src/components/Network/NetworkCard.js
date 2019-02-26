@@ -9,44 +9,23 @@ export class NetworkCard extends Component {
     const fullName = this.props.alum.firstName+" "+ this.props.alum.lastName;
     return (
       <div className="card horizontal">
-        <div className="card-image">
+        <div className="card-image cardImage" style={cardImgContainer}>
           <img style={cardImg} src={Image} alt={Placeholder}/>
         </div>
-        <div className="card-stacked">
+        <div className="card-stacked cardText" style={cardTextContainer}>
           <div style={cardText} className="card-content">
-          <span className="card-title"> {this.props.alum.firstName} {this.props.alum.lastName} </span>
-          <p>Role : {this.props.alum.role} </p>
-          <p>Company : {this.props.alum.company} </p>
-          <p>Location: {this.props.alum.location} </p>
-          <p>URL : {this.props.alum.url} </p>
+            <span className="card-title"> {this.props.alum.firstName} {this.props.alum.lastName} </span>
+            <span> {this.props.alum.role} </span>
+            <p>Company : {this.props.alum.company} </p>
+            <p>Location: {this.props.alum.location} </p>
+            <p>URL : {this.props.alum.url} </p>
           </div>
           <div style={btnRt}>
-            <Modal header={fullName} trigger={
-            <Button style={custBtn} floating medium lighten-1 className='teal'  icon='email' />}>
-            <p>Send a message here!</p>
-            <MyEditor />
-            </Modal>
-            <Modal header={fullName} trigger={
-              <Button style={custBtn} floating medium className='teal' icon='menu' />}>
-              <p>Profile Info here</p>
-              <div className="row valign-wrapper">
-                <div className="col s3">
-                  <img className="circle responsive-img" src={Image} alt={Placeholder} />
-                </div>
-
-                <div className="col s8">
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Company : Coding Dojo</p>
-                  <p> Location : San Jose, CA, USA</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                  <p> Role : React FrontEnd Engineer</p>
-                </div>
-              </div>
-            </Modal>
+              <Modal header={fullName} trigger={
+                <Button style={custBtn} floating medium lighten-1 className='teal'  icon='email' />}>
+                <p>Send a message here!</p>
+                <MyEditor />
+              </Modal>
           </div>
         </div>
       </div>
@@ -65,11 +44,20 @@ const custBtn = {
 
 const cardImg = {
   height: '190px',
-  width: '150px',
+  width: '100%',
+}
+
+const cardImgContainer = {
+  width : '40%'
+}
+
+const cardTextContainer = {
+  width : '60%'
 }
 
 const cardText = {
   display: 'inline-block',
+  fontSize : '0.75em',
   height: '100%',
   width: '75%',
   whiteSpace: 'nowrap',

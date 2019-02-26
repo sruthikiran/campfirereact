@@ -3,24 +3,25 @@ import Image from "../../img/dude.png"
 import Placeholder from "../../img/placeholder.png"
 import {Button, Pagination, Chip} from 'react-materialize'
 
+const allPosts = [
+  {user: 'Dane2', text: 'upvoted' ,topic: 'tuples in Python', at: '2 mins ago'},
+  {user: 'Sruthi', text: 'posted',topic: 'tuples in Python', at : '5 mins ago'},
+  {user: 'Dane3', text: 'posted' ,topic: 'Four Zero Four',  at: '25 mins ago'},
+  {user: 'Maxime Pollet', text: 'and 1 other started following you',topic: null, at: '3 days ago'},
+  {user: 'Dane5', text: 'and 5 others upvoted' ,topic: 'Hacking UI', at: '5 days ago'},
+  {user: 'Dane6', text: 'posted' , topic : 'Few things every developer needs to know about', at: '6 days ago'},
+]
 
 export class ActivityFeed extends Component {
   render() {
-    const allPosts = [
-      {user: 'Dane2', text: 'upvoted' ,topic: 'tuples in Python', at: '2 mins ago'},
-      {user: 'Sruthi', text: 'posted',topic: 'tuples in Python', at : '5 mins ago'},
-      {user: 'Dane3', text: 'posted' ,topic: 'Four Zero Four',  at: '25 mins ago'},
-      {user: 'Maxime Pollet', text: 'and 1 other started following you',topic: null, at: '3 days ago'},
-      {user: 'Dane5', text: 'and 5 others upvoted' ,topic: 'Hacking UI', at: '5 days ago'},
-      {user: 'Dane6', text: 'posted' , topic : 'Few things every developer needs to know about', at: '6 days ago'},
-    ]
+
     return(
       <React.Fragment>
-        <p style={headerStyle}>  <span style={important}> Activity Feed  </span> </p>
+        <p style={headerStyle}>  <span style={important}> Latest Activity </span> </p>
         <ul  className="collection">
           {allPosts.map(({ user, text, topic, at }) => (
               <li key={user} className="collection-item">
-                  <li> {user} {text} <span style={highlightTopic}> {topic}  </span>  <img style={imageStyle} src={Image} alt={Placeholder} /> </li>
+                  <li> {user} {text} <span style={highlightTopic}> {topic} </span>  <img style={imageStyle} src={Image} alt={Placeholder} /> <img style={imageStyle} src={Image} alt={Placeholder} /> </li>
                   <li style={timeStyle}> {at} </li>
               </li>
           ))}
@@ -63,6 +64,7 @@ const timeStyle = {
 const imageStyle = {
   width : '2em',
   height : '2em',
+  marginLeft : '0.25em',
   borderRadius : '1.5em',
   float: 'right'
 }
