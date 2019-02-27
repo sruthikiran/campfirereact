@@ -22,7 +22,7 @@ export class NetworkCard extends Component {
           </div>
           <div style={btnRt}>
               <Modal header={fullName} trigger={
-                <Button style={custBtn} floating medium lighten-1 className='teal'  icon='email' />}>
+                <Button style={custBtn} floating className='teal'  icon='email' />}>
                 <p>Send a message here!</p>
                 <MyEditor />
               </Modal>
@@ -36,7 +36,6 @@ export class NetworkCard extends Component {
 const btnRt = {
   textAlign: 'right',
   marginTop: '-75px',
-
 }
 const custBtn = {
   display: 'inline-block'
