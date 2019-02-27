@@ -20,7 +20,7 @@ export class NetworkRight extends Component {
           <div className="col s12 m6 l6 xl4">
             <NetworkCard key={alum.firstName} alum={alum} />
           </div>
-        ))};
+        ))}
       </React.Fragment>
     )}
     }

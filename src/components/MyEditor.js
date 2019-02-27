@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
+import {Button} from 'react-materialize'
 
 
 class MyEditor extends React.Component {
@@ -15,10 +16,18 @@ class MyEditor extends React.Component {
 
     render() {
       return (
-        <ReactQuill value={this.state.text}
+        <React.Fragment>
+          <ReactQuill value={this.state.text}
                     onChange={this.handleChange} />
+          <Button className="indigo" style={btnStyle}>Send</Button>
+        </React.Fragment>
       )
     }
+  }
+
+  const btnStyle = {
+    float: 'right',
+    marginTop: '1em',
   }
 
 export default MyEditor
