@@ -20,7 +20,7 @@ const qStyle = {
 }
 const pStyle = {
   fontSize:'0.75em',
-  float : 'right',
+  // float : 'right',
   color : 'green'
 }
 
