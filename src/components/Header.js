@@ -4,6 +4,7 @@ import Inbox from './Inbox/Inbox'
 import Forum from './Forum/Forums'
 import Profile from './Profile/Profile'
 import Network from './Network/Network'
+import Logo from '../img/fire.png'
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -14,7 +15,7 @@ export class Header extends Component {
         <div>
           <nav className="indigo">
             <div  className="nav-wrapper container">
-              <Link to="/"  style={logoStyle} className="brand-logo"> Campfire </Link>
+              <Link to="/"  style={logoStyle} className="brand-logo"> Campfire <img style={logo_img_style} src={Logo}/></Link>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li> <Link to="/feed"> Activity Feed </Link> </li>
                 <li> <Link to="/forum"> Forum </Link> </li>
@@ -82,6 +83,11 @@ function RenderProfile(){
 
 const logoStyle = {
   fontFamily: 'Pacifico, cursive',
+}
+
+const logo_img_style = {
+  height: '1em',
+  width: '1em',
 }
 
 export default Header

@@ -9,7 +9,7 @@ export class Forums extends Component {
       <div style={divStyle}>
         <p style={headerStyle}>  <span style={important}> Forum </span> </p>
         <Tabs style={tabStyle} className="tab-demo z-depth-1 indigo">
-          <Tab title="All Topics"> </Tab>
+          <Tab style={itemStyle} title="All Topics"> </Tab>
           <Tab style={itemStyle} title="New Topics" active></Tab>
           <Tab style={itemStyle} title="My Topics"></Tab>
         </Tabs>
@@ -26,12 +26,12 @@ export class Forums extends Component {
 
 const tabStyle={
   marginBottom: '1.5em',
+  
 }
 
 const itemStyle={
   margin: '1em',
-  // borderRight: '1px solid white',
-  // borderLeft: '1px solid white',
+  color: 'white',
 }
 
 const divStyle ={
