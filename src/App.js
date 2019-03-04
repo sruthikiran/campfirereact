@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 import {Modal, Button, Icon} from 'react-materialize'
 import Logo from './img/fire.png'
+import LinkedInPage from './components/Landing/LinkedInPage'
 
 import {
   BrowserRouter as Router,
@@ -24,6 +25,7 @@ const Landing = () => (
         <p className="flow-text"> You've graduated from bootcamp! Congrats! Now it's time to take the next step in your career - finding a job. With Campfire, you can circle up with your fellow cohort-mates as well as bootcamp alumni to network and help lift each other up. Find your cohort, and your next job, right here on Campfire!
         </p>
         <p className="flow-text">Use your LinkedIn account to get started.</p>
+        
       </div>
     </div>
   </div>
@@ -66,6 +68,7 @@ class App extends Component {
                   <p className="flow-text">Use your LinkedIn account to get started.</p>
                   <div style={wrapper_style}>
                     <button onClick={this.handleToggleLogin}  style={linkedin_btn}className="waves-effect btn-large"><i className="fab fa-linkedin"></i>  Login with LinkedIn</button>
+                    <LinkedInPage />
                   </div>
                 </div>
               </div>
