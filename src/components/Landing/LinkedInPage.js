@@ -27,7 +27,7 @@ class LinkedInPage extends Component {
     return (
       <div>
         <LinkedIn
-          clientId=""
+          clientId="86of3j7ukw9zld"
           onFailure={this.handleFailure}
           onSuccess={this.handleSuccess}
           redirectUri="http://localhost:3000/feed"
